@@ -643,15 +643,11 @@
                     userFilterId = 'all'; 
                     document.getElementById('userFilter').value = 'all';
                     
-                    const today = new Date().toISOString().split('T')[0];
-                    // Atur tanggal mulai default ke 30 hari lalu atau sesuai kebutuhan
-                    const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+                    document.getElementById('dateStartFilter').value = ''; // KOSONGKAN INI
+                    document.getElementById('dateEndFilter').value = '';   // KOSONGKAN INI
                     
-                    document.getElementById('dateStartFilter').value = thirtyDaysAgo;
-                    document.getElementById('dateEndFilter').value = today;
-                    
-                    dateStartFilter = thirtyDaysAgo;
-                    dateEndFilter = today;
+                    dateStartFilter = null; // GANTI INI KE NULL
+                    dateEndFilter = null;
                     // *************************************************
 
                 } else {
@@ -1191,5 +1187,6 @@
 
 </body>
 </html>
+
 
 
